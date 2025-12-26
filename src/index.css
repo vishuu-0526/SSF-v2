@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import "tailwindcss";
+
+.font-inria {
+  font-family: "Inria Sans", sans-serif;
+}
+
+/* ===============================
+   CRY.org BRAND SYSTEM
+   =============================== */
+:root {
+  --cry-yellow: #FDCF09;
+  --cry-yellow-hover: #e5bc08;
+  --cry-black: #000000;
+  --cry-grey: #333333;
+  --cry-light-grey: #f2f2f2;
+}
+
+body {
+  font-family: "Inria Sans", system-ui, sans-serif;
+  background-color: #ffffff;
+  color: var(--cry-black);
+  line-height: 1.5;
+}
+
+/* ===============================
+   COMPONENTS
+   =============================== */
+
+/* Buttons */
+.btn-cry-primary {
+  @apply px-6 py-2.5 font-bold text-black uppercase tracking-wide transition-all duration-300;
+  background-color: var(--cry-yellow);
+}
+
+.btn-cry-primary:hover {
+  background-color: var(--cry-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(253, 207, 9, 0.3);
+}
+
+.btn-cry-secondary {
+  @apply px-6 py-2.5 font-bold text-black uppercase tracking-wide border-2 border-black bg-transparent transition-all duration-300;
+}
+
+.btn-cry-secondary:hover {
+  @apply bg-black text-white;
+}
+
+/* Typography */
+.cry-title {
+  @apply text-4xl md:text-5xl font-bold text-black leading-tight mb-4;
+}
+
+.cry-subtitle {
+  @apply text-xl md:text-2xl font-bold text-gray-800 mb-2;
+}
+
+/* Sections */
+.section-cry {
+  @apply py-16 px-4 md:px-8 max-w-7xl mx-auto;
+}
+
+.section-cry-alt {
+  @apply py-16 px-4 md:px-8 w-full bg-[#f8f8f8];
+}
+
+/* Cards */
+.cry-card {
+  @apply bg-white p-6 shadow-lg border-b-4 border-transparent hover:border-[#FDCF09] transition-all duration-300;
+}
+
+/* Infinite Scroll defaults (keeping existing) */
+@keyframes scrollX {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scrollX {
+  animation: scrollX 25s linear infinite;
+}
+.animate-scrollX:hover {
+  animation-play-state: paused;
+}
